@@ -34,11 +34,15 @@ const services: Record<string, {
       "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
-      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="6" r="2" />
-        <ellipse cx="12" cy="12" rx="3" ry="4" />
-        <ellipse cx="12" cy="19" rx="4" ry="3" />
-        <path strokeLinecap="round" d="M9 12L5 9M15 12l4-3M9 12L6 15M15 12l3 3M8 6L5 4M16 6l3-2" />
+      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        {/* Ant body - head, thorax, abdomen */}
+        <circle cx="12" cy="4.5" r="2" />
+        <ellipse cx="12" cy="9" rx="1.5" ry="2" />
+        <ellipse cx="12" cy="14.5" rx="2.5" ry="3.5" />
+        {/* Antennae */}
+        <path d="M10.5 3.5L8 1M13.5 3.5L16 1" />
+        {/* Legs */}
+        <path d="M10.5 8L7 6M13.5 8L17 6M10.5 10L7 12M13.5 10L17 12M10 14L6 16M14 14L18 16" />
       </svg>
     ),
   },
@@ -61,12 +65,17 @@ const services: Record<string, {
       "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
-      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <ellipse cx="12" cy="8" rx="4" ry="3" />
-        <ellipse cx="12" cy="16" rx="5" ry="5" />
-        <path strokeLinecap="round" d="M7 16L3 18M17 16l4 2M7 16L4 14M17 16l3-2M8 8L5 6M16 8l3-2" />
-        <circle cx="10" cy="7" r="0.5" fill="currentColor" />
-        <circle cx="14" cy="7" r="0.5" fill="currentColor" />
+      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        {/* Cockroach body */}
+        <ellipse cx="12" cy="12" rx="4" ry="7" />
+        {/* Head */}
+        <ellipse cx="12" cy="4" rx="2" ry="1.5" />
+        {/* Antennae */}
+        <path d="M10.5 3L8 0.5M13.5 3L16 0.5" />
+        {/* Legs */}
+        <path d="M8.5 8L4 6M15.5 8L20 6M8 12L3 12M16 12L21 12M8.5 16L4 18M15.5 16L20 18" />
+        {/* Wing line */}
+        <path d="M12 6v10" />
       </svg>
     ),
   },
@@ -89,10 +98,18 @@ const services: Record<string, {
       "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
-      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        {/* Spider body */}
         <circle cx="12" cy="10" r="3" />
-        <ellipse cx="12" cy="15" rx="4" ry="3" />
-        <path strokeLinecap="round" d="M9 10L4 6M15 10l5-4M9 10L3 12M15 10l6 2M9 15L4 19M15 15l5 4M9 15L5 15M15 15l4 0" />
+        <ellipse cx="12" cy="15" rx="2" ry="2.5" />
+        {/* 8 legs */}
+        <path d="M9.5 9L5 4M14.5 9L19 4" />
+        <path d="M9 10.5L3 9M15 10.5L21 9" />
+        <path d="M9 12L4 15M15 12L20 15" />
+        <path d="M10 14.5L6 20M14 14.5L18 20" />
+        {/* Eyes */}
+        <circle cx="10.5" cy="9" r="0.5" fill="currentColor" />
+        <circle cx="13.5" cy="9" r="0.5" fill="currentColor" />
       </svg>
     ),
   },
@@ -115,13 +132,22 @@ const services: Record<string, {
       "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
-      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <ellipse cx="12" cy="13" rx="7" ry="5" />
-        <path strokeLinecap="round" d="M5 13c-1-2-1-5 1-6s4 0 4 0M19 13c1-2 1-5-1-6s-4 0-4 0" />
-        <circle cx="9" cy="12" r="1" fill="currentColor" />
-        <circle cx="15" cy="12" r="1" fill="currentColor" />
-        <ellipse cx="12" cy="14" rx="1.5" ry="1" />
-        <path strokeLinecap="round" d="M19 13c2 1 3 3 3 4M12 18v3" />
+      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        {/* Mouse body */}
+        <ellipse cx="10" cy="14" rx="6" ry="4" />
+        {/* Head */}
+        <circle cx="5" cy="12" r="3" />
+        {/* Ears */}
+        <circle cx="3.5" cy="9" r="1.5" />
+        <circle cx="6.5" cy="9" r="1.5" />
+        {/* Eye */}
+        <circle cx="4" cy="11.5" r="0.5" fill="currentColor" />
+        {/* Nose */}
+        <circle cx="2.5" cy="12.5" r="0.5" fill="currentColor" />
+        {/* Whiskers */}
+        <path d="M2 13L0 14M2 12.5L0 12M2 12L0 10" />
+        {/* Tail */}
+        <path d="M16 14Q20 14 21 10Q22 6 20 5" />
       </svg>
     ),
   },
@@ -144,11 +170,20 @@ const services: Record<string, {
       "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
-      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <ellipse cx="12" cy="7" rx="3" ry="2" />
-        <ellipse cx="12" cy="11" rx="2" ry="2" />
-        <ellipse cx="12" cy="16" rx="3" ry="4" />
-        <path strokeLinecap="round" d="M9 7L6 5M15 7l3-2M9 11L5 11M15 11l4 0M12 20l0 2M10 20l-1 2M14 20l1 2" />
+      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        {/* Wasp head */}
+        <circle cx="12" cy="4" r="2" />
+        {/* Thorax */}
+        <ellipse cx="12" cy="8" rx="2" ry="2" />
+        {/* Abdomen with stripes */}
+        <ellipse cx="12" cy="14" rx="3" ry="5" />
+        <path d="M9 12.5h6M9 14.5h6M9 16.5h6" />
+        {/* Wings */}
+        <path d="M10 7Q6 5 5 8M14 7Q18 5 19 8" />
+        {/* Stinger */}
+        <path d="M12 19v2.5" />
+        {/* Antennae */}
+        <path d="M10.5 2.5L9 1M13.5 2.5L15 1" />
       </svg>
     ),
   },
@@ -171,10 +206,17 @@ const services: Record<string, {
       "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
-      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <ellipse cx="12" cy="14" rx="4" ry="6" />
-        <circle cx="12" cy="6" r="3" />
-        <path strokeLinecap="round" d="M8 14L4 12M16 14l4-2M8 16L5 18M16 16l3 2M9 6L6 4M15 6l3-2" />
+      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        {/* Flea body - oval shape */}
+        <ellipse cx="12" cy="13" rx="4" ry="6" />
+        {/* Head */}
+        <circle cx="12" cy="5.5" r="2" />
+        {/* Jumping legs */}
+        <path d="M8 11L4 8M16 11L20 8" />
+        <path d="M8 15L3 17Q2 20 5 21" />
+        <path d="M16 15L21 17Q22 20 19 21" />
+        {/* Small front legs */}
+        <path d="M10 7L8 6M14 7L16 6" />
       </svg>
     ),
   },
@@ -197,12 +239,14 @@ const services: Record<string, {
       "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
-      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="12" r="6" />
-        <path strokeLinecap="round" d="M12 6V3M12 21v-3M6 12H3M21 12h-3M7.76 7.76L5.64 5.64M18.36 18.36l-2.12-2.12M7.76 16.24l-2.12 2.12M18.36 5.64l-2.12 2.12" />
-        <circle cx="10" cy="10" r="1" fill="currentColor" />
-        <circle cx="14" cy="10" r="1" fill="currentColor" />
-        <path strokeLinecap="round" d="M9 14h6" />
+      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        {/* Shield shape */}
+        <path d="M12 2L4 6v6c0 5.5 3.5 10 8 11 4.5-1 8-5.5 8-11V6l-8-4z" />
+        {/* Bug crossed out inside shield */}
+        <circle cx="12" cy="11" r="2.5" />
+        <path d="M10 9L8 7M14 9L16 7M9.5 11H7M14.5 11H17M10 13L8 15M14 13L16 15" />
+        {/* Cross out line */}
+        <path d="M8 8l8 8" strokeWidth="2" />
       </svg>
     ),
   },
@@ -226,10 +270,13 @@ const services: Record<string, {
       "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
-      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="11" cy="11" r="7" />
-        <path strokeLinecap="round" d="M21 21l-4.35-4.35" />
-        <path strokeLinecap="round" d="M11 8v6M8 11h6" />
+      <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        {/* Magnifying glass */}
+        <circle cx="10" cy="10" r="6" />
+        <path d="M14.5 14.5L20 20" strokeWidth="2" />
+        {/* Bug inside magnifying glass */}
+        <ellipse cx="10" cy="10" rx="2" ry="3" />
+        <path d="M8 9L6 8M12 9L14 8M8 11L6 12M12 11L14 12" />
       </svg>
     ),
   },
