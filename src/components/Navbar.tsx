@@ -58,7 +58,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors hover:text-[#50c148] min-h-0 ${
-                  isScrolled ? "text-[#231f20]" : "text-[#231f20]"
+                  isScrolled ? "text-[#231f20]" : "text-white"
                 }`}
               >
                 {link.label}
@@ -70,7 +70,9 @@ export default function Navbar() {
           <div className="hidden md:flex md:items-center md:gap-4">
             <a
               href="tel:+14357737103"
-              className="text-sm font-medium text-[#231f20] hover:text-[#50c148] transition-colors min-h-0"
+              className={`text-sm font-medium transition-colors hover:text-[#50c148] min-h-0 ${
+                isScrolled ? "text-[#231f20]" : "text-white"
+              }`}
             >
               (435) 773-7103
             </a>
@@ -85,7 +87,9 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-[#231f20] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#50c148]"
+            className={`md:hidden inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#50c148] ${
+              isScrolled ? "text-[#231f20] hover:bg-gray-100" : "text-white hover:bg-white/10"
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
             aria-label="Toggle navigation menu"

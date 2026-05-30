@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Boots Pest Control | St. George, Utah Pest Control Services",
   description:
-    "Professional pest control services in St. George and Southern Utah. Licensed & insured. Ant, spider, rodent, and general pest extermination. Call (435) 773-7103 for a free quote.",
+    "Professional pest control services in St. George and Southern Utah. Licensed. Ant, spider, rodent, and general pest extermination. Call (435) 773-7103 for a free quote.",
   keywords: [
     "pest control St. George",
     "exterminator Utah",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Boots Pest Control | St. George, Utah Pest Control Services",
     description:
-      "Professional pest control services in St. George and Southern Utah. Licensed & insured. Call (435) 773-7103 for a free quote.",
+      "Professional pest control services in St. George and Southern Utah. Licensed. Call (435) 773-7103 for a free quote.",
     url: "https://bootspestcontrol.com",
     siteName: "Boots Pest Control",
     locale: "en_US",

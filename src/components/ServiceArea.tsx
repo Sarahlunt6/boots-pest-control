@@ -11,6 +11,11 @@ const areas = [
   "La Verkin",
   "Leeds",
   "Toquerville",
+  "Central",
+  "Pine Valley",
+  "New Harmony",
+  "Enterprise",
+  "Beaver",
 ];
 
 export default function ServiceArea() {

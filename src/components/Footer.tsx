@@ -29,7 +29,7 @@ export default function Footer() {
             />
             <p className="text-gray-400 text-sm mb-4">
               Professional pest control services for St. George and Southern
-              Utah. Licensed, insured, and committed to protecting your home.
+              Utah. Licensed and committed to protecting your home.
             </p>
             <div className="flex items-center gap-2 text-[#50c148]">
               {[...Array(5)].map((_, i) => (
@@ -145,7 +145,7 @@ export default function Footer() {
               &copy; {currentYear} Boots Pest Control. All rights reserved.
             </p>
             <div className="flex items-center gap-4 text-sm text-gray-500">
-              <span>Licensed & Insured</span>
+              <span>Licensed</span>
               <span className="hidden sm:inline">|</span>
               <span>Serving Southern Utah</span>
             </div>

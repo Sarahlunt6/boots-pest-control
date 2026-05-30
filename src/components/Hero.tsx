@@ -52,7 +52,7 @@ export default function Hero() {
           className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto"
         >
           Professional pest control services for St. George and Southern Utah.
-          Licensed, insured, and committed to protecting your home and family.
+          Licensed and committed to protecting your home and family.
         </motion.p>
 
         <motion.div
@@ -107,7 +107,7 @@ export default function Hero() {
                 clipRule="evenodd"
               />
             </svg>
-            <span>Licensed & Insured</span>
+            <span>Licensed</span>
           </div>
           <div className="flex items-center gap-2">
             <svg

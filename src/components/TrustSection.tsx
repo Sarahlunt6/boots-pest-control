@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const trustItems = [
   {
-    title: "Licensed & Insured",
+    title: "Licensed",
     description: "Fully licensed professionals you can trust with your home",
     icon: (
       <svg
