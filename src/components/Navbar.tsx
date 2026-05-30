@@ -3,16 +3,24 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
-const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#reviews", label: "Reviews" },
-  { href: "#contact", label: "Contact" },
+const services = [
+  { title: "Ant Extermination", slug: "ant-extermination" },
+  { title: "Cockroach Extermination", slug: "cockroach-extermination" },
+  { title: "Spider Extermination", slug: "spider-extermination" },
+  { title: "Rodent Extermination", slug: "rodent-extermination" },
+  { title: "Hornet & Wasp Control", slug: "hornet-wasp-control" },
+  { title: "Flea & Mite Treatment", slug: "flea-mite-treatment" },
+  { title: "General Bug Control", slug: "general-bug-control" },
+  { title: "Pest Inspection", slug: "pest-inspection" },
 ];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +32,7 @@ export default function Navbar() {
 
   const handleNavClick = () => {
     setIsMobileMenuOpen(false);
+    setIsMobileServicesOpen(false);
   };
 
   return (
@@ -53,15 +62,61 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:gap-8 h-full">
-            {navLinks.map((link) => (
+            {/* Services Dropdown */}
+            <div
+              className="relative h-full flex items-center"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
               <a
-                key={link.href}
-                href={link.href}
-                className="text-base font-medium transition-colors hover:text-[#50c148] min-h-0 flex items-center h-full text-white"
+                href="#services"
+                className="text-base font-medium transition-colors hover:text-[#50c148] min-h-0 flex items-center h-full text-white gap-1"
               >
-                {link.label}
+                Services
+                <svg
+                  className={`h-4 w-4 transition-transform ${isServicesOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
               </a>
-            ))}
+              <AnimatePresence>
+                {isServicesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-0 w-64 bg-[#231f20] rounded-xl shadow-xl border border-gray-700 py-2 z-50"
+                  >
+                    {services.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className="block px-4 py-2.5 text-sm text-white hover:bg-[#50c148]/10 hover:text-[#50c148] transition-colors"
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+            <a
+              href="#reviews"
+              className="text-base font-medium transition-colors hover:text-[#50c148] min-h-0 flex items-center h-full text-white"
+            >
+              Reviews
+            </a>
+            <a
+              href="#contact"
+              className="text-base font-medium transition-colors hover:text-[#50c148] min-h-0 flex items-center h-full text-white"
+            >
+              Contact
+            </a>
           </div>
 
           {/* Desktop CTA */}
@@ -135,16 +190,62 @@ export default function Navbar() {
             className="md:hidden bg-[#231f20] border-t border-gray-700"
           >
             <div className="px-4 py-4 space-y-3">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={handleNavClick}
-                  className="block px-3 py-2 text-base font-medium text-white hover:text-[#50c148] hover:bg-white/10 rounded-md"
+              {/* Mobile Services Dropdown */}
+              <div>
+                <button
+                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-[#50c148] hover:bg-white/10 rounded-md"
                 >
-                  {link.label}
-                </a>
-              ))}
+                  Services
+                  <svg
+                    className={`h-4 w-4 transition-transform ${isMobileServicesOpen ? "rotate-180" : ""}`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </button>
+                <AnimatePresence>
+                  {isMobileServicesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pl-4 py-2 space-y-1">
+                        {services.map((service) => (
+                          <Link
+                            key={service.slug}
+                            href={`/services/${service.slug}`}
+                            onClick={handleNavClick}
+                            className="block px-3 py-2 text-sm text-gray-300 hover:text-[#50c148] hover:bg-white/10 rounded-md"
+                          >
+                            {service.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+              <a
+                href="#reviews"
+                onClick={handleNavClick}
+                className="block px-3 py-2 text-base font-medium text-white hover:text-[#50c148] hover:bg-white/10 rounded-md"
+              >
+                Reviews
+              </a>
+              <a
+                href="#contact"
+                onClick={handleNavClick}
+                className="block px-3 py-2 text-base font-medium text-white hover:text-[#50c148] hover:bg-white/10 rounded-md"
+              >
+                Contact
+              </a>
               <div className="pt-3 border-t border-gray-700 space-y-3">
                 <a
                   href="tel:+14357737103"

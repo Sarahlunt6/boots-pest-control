@@ -54,7 +54,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-[#50c148] bg-[#50c148]/10 rounded-full border border-[#50c148]/20">
-            St. George&apos;s Trusted Pest Control
+            Southern Utah&apos;s Trusted Pest Control
           </span>
         </motion.div>
 
