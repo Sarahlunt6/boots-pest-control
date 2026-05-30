@@ -28,14 +28,14 @@ export default function OurWork() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video"
+            className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]"
           >
             <video
               autoPlay
               muted
               loop
               playsInline
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover"
             >
               <source src="/spray-video-1.mp4" type="video/mp4" />
             </video>
@@ -51,14 +51,14 @@ export default function OurWork() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video"
+            className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]"
           >
             <video
               autoPlay
               muted
               loop
               playsInline
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover"
             >
               <source src="/spray-video-2.mp4" type="video/mp4" />
             </video>

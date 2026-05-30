@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { use } from "react";
+import Footer from "@/components/Footer";
 
 const services: Record<string, {
   title: string;
@@ -251,9 +252,9 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
               <Image
                 src="/logo-new.png"
                 alt="Boots Pest Control"
-                width={160}
-                height={48}
-                className="h-10 w-auto lg:h-12"
+                width={200}
+                height={60}
+                className="h-14 w-auto lg:h-16"
                 priority
               />
             </Link>
@@ -452,21 +453,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#231f20] text-white border-t border-gray-800">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm">
-              &copy; {new Date().getFullYear()} Boots Pest Control. All rights reserved.
-            </p>
-            <div className="flex items-center gap-4 text-sm text-gray-500">
-              <span>Licensed</span>
-              <span>|</span>
-              <span>Serving Southern Utah</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
