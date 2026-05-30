@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { use } from "react";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const services: Record<string, {
@@ -292,50 +292,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
 
   return (
     <>
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#231f20] shadow-md">
-        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between lg:h-20">
-            <Link href="/" className="flex items-center min-h-0">
-              <Image
-                src="/logo-new.png"
-                alt="Boots Pest Control"
-                width={200}
-                height={60}
-                className="h-14 w-auto lg:h-16"
-                priority
-              />
-            </Link>
-            <div className="hidden md:flex md:items-center md:gap-8">
-              <Link href="/#services" className="text-base font-medium text-white hover:text-[#50c148] transition-colors">
-                Services
-              </Link>
-              <Link href="/#reviews" className="text-base font-medium text-white hover:text-[#50c148] transition-colors">
-                Reviews
-              </Link>
-              <Link href="/#contact" className="text-base font-medium text-white hover:text-[#50c148] transition-colors">
-                Contact
-              </Link>
-            </div>
-            <div className="hidden md:flex md:items-center md:gap-4">
-              <a
-                href="tel:+14357737103"
-                className="inline-flex items-center justify-center rounded-full border-2 border-white/30 px-5 py-2 text-sm font-semibold text-white transition-all hover:border-[#50c148] hover:text-[#50c148]"
-              >
-                (435) 773-7103
-              </a>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfWiFx6brRo6eADTSwHZW_MBrzyhutg5FX1FmidVKYdfVTqvg/viewform?usp=header"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-[#50c148] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#42a23b] hover:shadow-md"
-              >
-                Free Quote
-              </a>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <Navbar />
 
       <main className="pt-16 lg:pt-20">
         {/* Hero Section */}
