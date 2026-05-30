@@ -42,7 +42,7 @@ export default function Navbar() {
             className="flex items-center min-h-0"
           >
             <Image
-              src="/logo.png"
+              src="/logo-new.png"
               alt="Boots Pest Control"
               width={160}
               height={48}
@@ -52,12 +52,12 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:gap-8">
+          <div className="hidden md:flex md:items-center md:gap-8 h-full">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-[#50c148] min-h-0 ${
+                className={`text-sm font-medium transition-colors hover:text-[#50c148] min-h-0 flex items-center h-full ${
                   isScrolled ? "text-[#231f20]" : "text-white"
                 }`}
               >

@@ -1,23 +1,47 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const heroVideos = [
+  "/hero-video.mp4",
+  "/spray-video-1.mp4",
+  "/spray-video-2.mp4",
+];
 
 export default function Hero() {
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentVideoIndex((prev) => (prev + 1) % heroVideos.length);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/hero-video.mp4" type="video/mp4" />
-      </video>
+      {/* Background videos with crossfade */}
+      <AnimatePresence mode="sync">
+        <motion.video
+          key={currentVideoIndex}
+          autoPlay
+          muted
+          loop
+          playsInline
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={heroVideos[currentVideoIndex]} type="video/mp4" />
+        </motion.video>
+      </AnimatePresence>
 
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/60" />

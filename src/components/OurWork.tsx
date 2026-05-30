@@ -35,7 +35,7 @@ export default function OurWork() {
               muted
               loop
               playsInline
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             >
               <source src="/spray-video-1.mp4" type="video/mp4" />
             </video>
@@ -58,7 +58,7 @@ export default function OurWork() {
               muted
               loop
               playsInline
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             >
               <source src="/spray-video-2.mp4" type="video/mp4" />
             </video>
