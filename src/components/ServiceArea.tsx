@@ -28,6 +28,7 @@ export default function ServiceArea() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="text-center lg:text-left"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Serving Southern Utah
@@ -38,7 +39,7 @@ export default function ServiceArea() {
               anywhere in our service area, we&apos;re here to help.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               {areas.map((area, index) => (
                 <motion.div
                   key={area}
@@ -46,10 +47,10 @@ export default function ServiceArea() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex items-center gap-2 text-gray-300"
+                  className="flex items-center justify-center lg:justify-start gap-2 text-gray-300"
                 >
                   <svg
-                    className="h-4 w-4 text-[#50c148] flex-shrink-0"
+                    className="h-5 w-5 text-[#50c148] flex-shrink-0"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -59,7 +60,7 @@ export default function ServiceArea() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span className="text-sm font-medium">{area}</span>
+                  <span className="text-base font-medium">{area}</span>
                 </motion.div>
               ))}
             </div>
