@@ -5,20 +5,20 @@ import { motion } from "framer-motion";
 const reviews = [
   {
     text: "Boots Pest Control is a step above other companies. They treat all around the sides of the house and also the eaves of the roof where lots of pests hide. They also sprayed the perimeter of our yard to keep bugs away from the neighboring farm. I was especially impressed that they swept all of the cobwebs off our windows and outside walls. Ben was very thorough and explained the services he performed. I would highly recommend Boots Pest Control!!",
-    author: "Julie Pasley",
-    location: "St. George, UT",
-    rating: 5,
-  },
-  {
-    text: "We've had an amazing experience with Boots Pest Control! Their technician, Ben, was professional, friendly, and very thorough when treating both our home and yard. We were dealing with bugs around the outside of the house and in the lawn area, and after their service we noticed a major improvement. They took the time to explain their treatment process. Highly recommend Boots Pest Control for anyone needing reliable home and yard pest control services!",
-    author: "Sarah Lunt",
+    author: "Julie P.",
     location: "St. George, UT",
     rating: 5,
   },
   {
     text: "Great service and very thorough treatment. Highly recommend Boots Pest Control!",
-    author: "Ben Pasley",
-    location: "St. George, UT",
+    author: "Ben P.",
+    location: "Beaver, UT",
+    rating: 5,
+  },
+  {
+    text: "We've had an amazing experience with Boots Pest Control! Their technician, Ben, was professional, friendly, and very thorough when treating both our home and yard. We were dealing with bugs around the outside of the house and in the lawn area, and after their service we noticed a major improvement. They took the time to explain their treatment process. Highly recommend Boots Pest Control for anyone needing reliable home and yard pest control services!",
+    author: "Sarah L.",
+    location: "Enterprise, UT",
     rating: 5,
   },
 ];
