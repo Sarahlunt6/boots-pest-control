@@ -292,7 +292,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
 
   return (
     <>
-      <Navbar />
+      <Navbar forceDark />
 
       <main className="pt-16 lg:pt-20">
         {/* Hero Section */}

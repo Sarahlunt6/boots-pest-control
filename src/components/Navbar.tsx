@@ -16,7 +16,7 @@ const services = [
   { title: "Pest Inspection", slug: "pest-inspection" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ forceDark = false }: { forceDark?: boolean }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || forceDark
           ? "bg-[#231f20] shadow-md"
           : "bg-transparent"
       }`}
@@ -46,8 +46,8 @@ export default function Navbar() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
-          <a
-            href="#"
+          <Link
+            href="/"
             className="flex items-center min-h-0"
           >
             <Image
@@ -58,7 +58,7 @@ export default function Navbar() {
               className="h-14 w-auto lg:h-16"
               priority
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:gap-8 h-full">
@@ -68,8 +68,8 @@ export default function Navbar() {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <a
-                href="#services"
+              <Link
+                href="/#services"
                 className="text-base font-medium transition-colors hover:text-[#50c148] min-h-0 flex items-center h-full text-white gap-1"
               >
                 Services
@@ -82,7 +82,7 @@ export default function Navbar() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
-              </a>
+              </Link>
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
@@ -105,18 +105,18 @@ export default function Navbar() {
                 )}
               </AnimatePresence>
             </div>
-            <a
-              href="#reviews"
+            <Link
+              href="/#reviews"
               className="text-base font-medium transition-colors hover:text-[#50c148] min-h-0 flex items-center h-full text-white"
             >
               Reviews
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/#contact"
               className="text-base font-medium transition-colors hover:text-[#50c148] min-h-0 flex items-center h-full text-white"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Desktop CTA */}
@@ -232,20 +232,20 @@ export default function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
-              <a
-                href="#reviews"
+              <Link
+                href="/#reviews"
                 onClick={handleNavClick}
                 className="block px-3 py-2 text-base font-medium text-white hover:text-[#50c148] hover:bg-white/10 rounded-md"
               >
                 Reviews
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                href="/#contact"
                 onClick={handleNavClick}
                 className="block px-3 py-2 text-base font-medium text-white hover:text-[#50c148] hover:bg-white/10 rounded-md"
               >
                 Contact
-              </a>
+              </Link>
               <div className="pt-3 border-t border-gray-700 space-y-3">
                 <a
                   href="tel:+14357737103"
