@@ -20,7 +20,7 @@ const areas = [
 
 export default function ServiceArea() {
   return (
-    <section className="py-16 sm:py-20 bg-gray-50">
+    <section className="py-16 sm:py-20 bg-[#231f20]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -29,10 +29,10 @@ export default function ServiceArea() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#231f20] mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Serving Southern Utah
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-300 mb-8">
               Boots Pest Control proudly serves St. George and the surrounding
               communities in Southern Utah. If you&apos;re dealing with pests
               anywhere in our service area, we&apos;re here to help.
@@ -46,7 +46,7 @@ export default function ServiceArea() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex items-center gap-2 text-gray-700"
+                  className="flex items-center gap-2 text-gray-300"
                 >
                   <svg
                     className="h-4 w-4 text-[#50c148] flex-shrink-0"
@@ -64,7 +64,7 @@ export default function ServiceArea() {
               ))}
             </div>
 
-            <p className="text-sm text-gray-500 mb-6">
+            <p className="text-sm text-gray-400 mb-6">
               Not sure if we service your area? Give us a call and we&apos;ll
               let you know!
             </p>
