@@ -30,7 +30,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-sm shadow-md"
+          ? "bg-[#231f20] shadow-md"
           : "bg-transparent"
       }`}
     >
@@ -57,9 +57,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-[#50c148] min-h-0 flex items-center h-full ${
-                  isScrolled ? "text-[#231f20]" : "text-white"
-                }`}
+                className="text-base font-medium transition-colors hover:text-[#50c148] min-h-0 flex items-center h-full text-white"
               >
                 {link.label}
               </a>
@@ -70,14 +68,14 @@ export default function Navbar() {
           <div className="hidden md:flex md:items-center md:gap-4">
             <a
               href="tel:+14357737103"
-              className={`text-sm font-medium transition-colors hover:text-[#50c148] min-h-0 ${
-                isScrolled ? "text-[#231f20]" : "text-white"
-              }`}
+              className="inline-flex items-center justify-center rounded-full border-2 border-white/30 px-5 py-2 text-sm font-semibold text-white transition-all hover:border-[#50c148] hover:text-[#50c148]"
             >
               (435) 773-7103
             </a>
             <a
-              href="#quote"
+              href="https://clienthub.getjobber.com/client_hubs/bc87bfe8-af39-4a9d-909b-d9e843d714d9/public/work_request/new?source=social_media"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-[#50c148] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#42a23b] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#50c148]"
             >
               Free Quote
@@ -87,9 +85,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className={`md:hidden inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#50c148] ${
-              isScrolled ? "text-[#231f20] hover:bg-gray-100" : "text-white hover:bg-white/10"
-            }`}
+            className="md:hidden inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#50c148] text-white hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
             aria-label="Toggle navigation menu"
@@ -136,7 +132,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-white border-t border-gray-100"
+            className="md:hidden bg-[#231f20] border-t border-gray-700"
           >
             <div className="px-4 py-4 space-y-3">
               {navLinks.map((link) => (
@@ -144,15 +140,15 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={handleNavClick}
-                  className="block px-3 py-2 text-base font-medium text-[#231f20] hover:text-[#50c148] hover:bg-gray-50 rounded-md"
+                  className="block px-3 py-2 text-base font-medium text-white hover:text-[#50c148] hover:bg-white/10 rounded-md"
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="pt-3 border-t border-gray-100 space-y-3">
+              <div className="pt-3 border-t border-gray-700 space-y-3">
                 <a
                   href="tel:+14357737103"
-                  className="flex items-center gap-2 px-3 py-2 text-base font-medium text-[#231f20] hover:text-[#50c148]"
+                  className="flex items-center gap-2 px-3 py-2 text-base font-medium text-white hover:text-[#50c148]"
                 >
                   <svg
                     className="h-5 w-5"
@@ -170,7 +166,9 @@ export default function Navbar() {
                   (435) 773-7103
                 </a>
                 <a
-                  href="#quote"
+                  href="https://clienthub.getjobber.com/client_hubs/bc87bfe8-af39-4a9d-909b-d9e843d714d9/public/work_request/new?source=social_media"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={handleNavClick}
                   className="block w-full text-center rounded-full bg-[#50c148] px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#42a23b]"
                 >
