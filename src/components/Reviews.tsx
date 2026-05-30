@@ -117,7 +117,7 @@ export default function Reviews() {
           className="mt-12 text-center"
         >
           <a
-            href="https://www.google.com/maps/place/Boots+Pest+Control"
+            href="https://www.google.com/search?sca_esv=f983faa59103653d&rlz=1C5MACD_enUS1128US1128&sxsrf=ANbL-n78JcNl7CjivoJPBeEF7HNOvJYRGA:1780180280626&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOWFkigoiTjggX-w6ztzYzdADrQ8xQ2kTc3O5Tv3V4AcXVJBoPU_OfZ5Uo_KIkhD79oeCddu3VXMchl9MzfgW_mBZFOyNYeva69TfrAUQZwKA6nPFfg%3D%3D&q=Boots+Pest+Control+Reviews&sa=X&ved=2ahUKEwiT8IyqiOKUAxXQLEQIHe7JN4AQ0bkNegQIJxAF&biw=1127&bih=711&dpr=2"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[#50c148] font-medium hover:text-[#42a23b] transition-colors"

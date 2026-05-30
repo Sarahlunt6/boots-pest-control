@@ -30,8 +30,8 @@ const services: Record<string, {
       "Thorough inspection to identify ant species and locate colonies",
       "Targeted treatment of colony locations and entry points",
       "Application of protective barrier around your home's perimeter",
-      "Follow-up visit to ensure complete elimination",
-      "Prevention recommendations to keep ants away"
+      "Prevention recommendations to keep ants away",
+      "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
       <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -58,7 +58,7 @@ const services: Record<string, {
       "Identification of roach species and harborage areas",
       "Application of targeted baits and treatments",
       "Treatment of cracks, crevices, and entry points",
-      "Follow-up treatments to eliminate remaining populations"
+      "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
       <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -86,7 +86,7 @@ const services: Record<string, {
       "Removal of existing webs and egg sacs",
       "Treatment of common hiding spots and entry points",
       "Exterior perimeter treatment to prevent new spiders",
-      "Recommendations for reducing spider-attracting conditions"
+      "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
       <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -112,7 +112,7 @@ const services: Record<string, {
       "Strategic placement of traps and bait stations",
       "Sealing of entry points to prevent re-entry",
       "Removal of trapped rodents and sanitation",
-      "Ongoing monitoring and prevention services"
+      "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
       <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -141,7 +141,7 @@ const services: Record<string, {
       "Location of all nests on your property",
       "Professional removal of nests using protective equipment",
       "Treatment to prevent nest rebuilding",
-      "Recommendations for preventing future nests"
+      "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
       <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -168,7 +168,7 @@ const services: Record<string, {
       "Treatment of all carpets, furniture, and pet areas",
       "Outdoor treatment of yards and pet areas",
       "Application of growth regulators to prevent eggs from hatching",
-      "Coordination with your veterinarian for pet treatment"
+      "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
       <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -194,7 +194,7 @@ const services: Record<string, {
       "Treatment of interior problem areas and hiding spots",
       "Exterior perimeter treatment to create a barrier",
       "Treatment of common entry points around doors and windows",
-      "Quarterly maintenance available for ongoing protection"
+      "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
       <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -222,7 +222,8 @@ const services: Record<string, {
       "Exterior inspection of foundation, landscaping, and structures",
       "Identification of current pest activity and evidence",
       "Assessment of conditions that attract pests",
-      "Detailed report with recommendations and prevention plan"
+      "Detailed report with recommendations and prevention plan",
+      "100% Satisfaction Guarantee - we'll respray for free if you're not satisfied"
     ],
     icon: (
       <svg className="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -277,7 +278,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                 (435) 773-7103
               </a>
               <a
-                href="https://clienthub.getjobber.com/client_hubs/bc87bfe8-af39-4a9d-909b-d9e843d714d9/public/work_request/new?source=social_media"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfWiFx6brRo6eADTSwHZW_MBrzyhutg5FX1FmidVKYdfVTqvg/viewform?usp=header"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-[#50c148] px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#42a23b] hover:shadow-md"
@@ -316,7 +317,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                   {service.longDescription}
                 </p>
                 <a
-                  href="https://clienthub.getjobber.com/client_hubs/bc87bfe8-af39-4a9d-909b-d9e843d714d9/public/work_request/new?source=social_media"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfWiFx6brRo6eADTSwHZW_MBrzyhutg5FX1FmidVKYdfVTqvg/viewform?usp=header"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-[#50c148] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[#50c148]/25 transition-all hover:bg-[#42a23b] hover:shadow-xl hover:scale-105"
@@ -431,7 +432,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="https://clienthub.getjobber.com/client_hubs/bc87bfe8-af39-4a9d-909b-d9e843d714d9/public/work_request/new?source=social_media"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfWiFx6brRo6eADTSwHZW_MBrzyhutg5FX1FmidVKYdfVTqvg/viewform?usp=header"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-[#50c148] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[#50c148]/25 transition-all hover:bg-[#42a23b] hover:shadow-xl hover:scale-105"
