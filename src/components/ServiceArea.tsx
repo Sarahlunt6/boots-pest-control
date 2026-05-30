@@ -39,30 +39,32 @@ export default function ServiceArea() {
               anywhere in our service area, we&apos;re here to help.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-              {areas.map((area, index) => (
-                <motion.div
-                  key={area}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex items-center justify-center lg:justify-start gap-2 text-gray-300"
-                >
-                  <svg
-                    className="h-5 w-5 text-[#50c148] flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
+            <div className="flex justify-center lg:justify-start mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-4">
+                {areas.map((area, index) => (
+                  <motion.div
+                    key={area}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    className="flex items-center gap-2 text-gray-300"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-base font-medium">{area}</span>
-                </motion.div>
-              ))}
+                    <svg
+                      className="h-5 w-5 text-[#50c148] flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="text-base font-medium">{area}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
 
             <p className="text-sm text-gray-400 mb-6">
