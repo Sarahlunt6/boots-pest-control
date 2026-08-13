@@ -21,6 +21,48 @@ const reviews = [
     location: "Enterprise, UT",
     rating: 5,
   },
+  {
+    text: "Boots Pest Control did a great job for us and even took initiative in places, I didn't even think to treat. They have a very thorough treatment for the money they charge and there is no contract to sign. I would recommend them to any of my friends or family members.",
+    author: "Spencer Kohler",
+    location: "St. George, UT",
+    rating: 5,
+  },
+  {
+    text: "First time & very impressed. Ben was very thorough. Definitely will have them come back.",
+    author: "Valerie Williams",
+    location: "St. George, UT",
+    rating: 5,
+  },
+  {
+    text: "This is my first time using this company. They explained things well and they are very friendly and helpful. Can't wait to see the results.",
+    author: "Miranda Brown",
+    location: "St. George, UT",
+    rating: 5,
+  },
+  {
+    text: "We had these guys come spray bugs for us. They did a great job and did just what they said they would do. They were cost friendly as well.",
+    author: "Katelynd Weldert",
+    location: "St. George, UT",
+    rating: 5,
+  },
+  {
+    text: "Boots & Ben are a couple of awesome guys. Ben did a thorough job with all of our bug and ant problems! Thanks guys!!",
+    author: "Carolyn Atwood",
+    location: "St. George, UT",
+    rating: 5,
+  },
+  {
+    text: "Just had our first treatment from Boots. Ben was very friendly & communicated great. He took down a large wasp nest, & I'm looking forward to less ants & earwigs!",
+    author: "Keri Stolworthy",
+    location: "St. George, UT",
+    rating: 5,
+  },
+  {
+    text: "I had a great experience using Boots Pest Control. Ben the technician was professional and easy to work with. I appreciated his attention to detail and the time he took to help me understand what to expect. I highly recommend Boots Pest Control for your home pest control needs.",
+    author: "John Holbrook",
+    location: "St. George, UT",
+    rating: 5,
+  },
 ];
 
 function StarRating({ rating }: { rating: number }) {
@@ -62,7 +104,7 @@ export default function Reviews() {
             <div className="flex flex-col items-start">
               <StarRating rating={5} />
               <span className="text-sm text-gray-600 mt-1">
-                Based on 3 Google Reviews
+                Based on 25+ Google Reviews
               </span>
             </div>
           </div>
