@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
 
 const reviews = [
   {
@@ -89,15 +90,32 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 export default function Reviews() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % reviews.length);
+  }, []);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
+
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, [isPaused, nextSlide]);
+
   return (
-    <section id="reviews" className="py-20 sm:py-28 bg-white">
+    <section id="reviews" className="py-16 sm:py-20 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="text-5xl font-bold text-[#231f20]">5.0</span>
@@ -117,38 +135,101 @@ export default function Reviews() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {reviews.map((review, index) => (
+        <div
+          className="relative max-w-3xl mx-auto"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-12 z-10 h-10 w-10 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-600 hover:text-[#50c148] transition-colors"
+            aria-label="Previous review"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-12 z-10 h-10 w-10 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-600 hover:text-[#50c148] transition-colors"
+            aria-label="Next review"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+
+          <div className="overflow-hidden">
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              key={currentIndex}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.3 }}
               className="bg-gray-50 rounded-2xl p-6 sm:p-8"
             >
-              <StarRating rating={review.rating} />
-              <p className="mt-4 text-gray-700 leading-relaxed italic">
-                &ldquo;{review.text}&rdquo;
+              <div className="flex justify-center mb-4">
+                <StarRating rating={reviews[currentIndex].rating} />
+              </div>
+              <p className="text-gray-700 leading-relaxed italic text-center text-lg">
+                &ldquo;{reviews[currentIndex].text}&rdquo;
               </p>
-              <div className="mt-6 flex items-center gap-3">
+              <div className="mt-6 flex items-center justify-center gap-3">
                 <div className="h-10 w-10 rounded-full bg-[#50c148]/20 flex items-center justify-center">
                   <span className="text-[#50c148] font-semibold text-sm">
-                    {review.author
+                    {reviews[currentIndex].author
                       .split(" ")
                       .map((n) => n[0])
                       .join("")}
                   </span>
                 </div>
-                <div>
+                <div className="text-left">
                   <p className="font-semibold text-[#231f20]">
-                    {review.author}
+                    {reviews[currentIndex].author}
                   </p>
-                  <p className="text-sm text-gray-500">{review.location}</p>
+                  <p className="text-sm text-gray-500">
+                    {reviews[currentIndex].location}
+                  </p>
                 </div>
               </div>
             </motion.div>
-          ))}
+          </div>
+
+          <div className="flex justify-center gap-2 mt-6">
+            {reviews.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-2 rounded-full transition-all ${
+                  index === currentIndex
+                    ? "w-6 bg-[#50c148]"
+                    : "w-2 bg-gray-300 hover:bg-gray-400"
+                }`}
+                aria-label={`Go to review ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         <motion.div
@@ -156,7 +237,7 @@ export default function Reviews() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 text-center"
+          className="mt-8 text-center"
         >
           <a
             href="https://www.google.com/search?sca_esv=f983faa59103653d&rlz=1C5MACD_enUS1128US1128&sxsrf=ANbL-n78JcNl7CjivoJPBeEF7HNOvJYRGA:1780180280626&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOWFkigoiTjggX-w6ztzYzdADrQ8xQ2kTc3O5Tv3V4AcXVJBoPU_OfZ5Uo_KIkhD79oeCddu3VXMchl9MzfgW_mBZFOyNYeva69TfrAUQZwKA6nPFfg%3D%3D&q=Boots+Pest+Control+Reviews&sa=X&ved=2ahUKEwiT8IyqiOKUAxXQLEQIHe7JN4AQ0bkNegQIJxAF&biw=1127&bih=711&dpr=2"
