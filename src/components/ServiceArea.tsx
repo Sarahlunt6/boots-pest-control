@@ -20,7 +20,7 @@ const areas = [
 
 export default function ServiceArea() {
   return (
-    <section className="py-16 sm:py-20 bg-[#231f20]">
+    <section id="service-area" className="py-16 sm:py-20 bg-[#231f20]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -68,8 +68,20 @@ export default function ServiceArea() {
             </div>
 
             <p className="text-sm text-gray-400 mb-6">
-              Not sure if we service your area? Give us a call and we&apos;ll
-              let you know!
+              Not sure if we service your area?{" "}
+              <a href="tel:+14357737103" className="text-link">
+                Give us a call
+              </a>{" "}
+              or{" "}
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfWiFx6brRo6eADTSwHZW_MBrzyhutg5FX1FmidVKYdfVTqvg/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-link"
+              >
+                request a quote
+              </a>{" "}
+              and we&apos;ll let you know!
             </p>
 
             <a

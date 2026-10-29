@@ -1,14 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
-  "Ant Extermination",
-  "Cockroach Extermination",
-  "Spider Extermination",
-  "Rodent Extermination",
-  "Hornet & Wasp Control",
-  "Flea & Mite Treatment",
-  "General Bug Control",
-  "Pest Inspection",
+  { title: "Ant Extermination", slug: "ant-extermination" },
+  { title: "Cockroach Extermination", slug: "cockroach-extermination" },
+  { title: "Spider Extermination", slug: "spider-extermination" },
+  { title: "Rodent Extermination", slug: "rodent-extermination" },
+  { title: "Hornet & Wasp Control", slug: "hornet-wasp-control" },
+  { title: "Flea & Mite Treatment", slug: "flea-mite-treatment" },
+  { title: "General Bug Control", slug: "general-bug-control" },
+  { title: "Pest Inspection", slug: "pest-inspection" },
 ];
 
 export default function Footer() {
@@ -28,8 +29,15 @@ export default function Footer() {
               className="h-16 w-auto mb-4"
             />
             <p className="text-gray-400 text-sm mb-4">
-              Professional pest control services for St. George and Southern
-              Utah. Licensed and committed to protecting your home.
+              Professional{" "}
+              <Link href="/#services" className="text-link">
+                pest control services
+              </Link>{" "}
+              for{" "}
+              <Link href="/#service-area" className="text-link">
+                St. George and Southern Utah
+              </Link>
+              . Licensed and committed to protecting your home.
             </p>
             <div className="flex items-center gap-2 text-[#50c148]">
               {[...Array(5)].map((_, i) => (
@@ -46,7 +54,12 @@ export default function Footer() {
                   />
                 </svg>
               ))}
-              <span className="text-gray-400 text-sm ml-1">5.0 Rating</span>
+              <Link
+                href="/#reviews"
+                className="inline-flex items-center text-gray-400 text-sm ml-1 hover:text-[#50c148] transition-colors"
+              >
+                5.0 Rating
+              </Link>
             </div>
           </div>
 
@@ -54,14 +67,14 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {services.slice(0, 6).map((service) => (
-                <li key={service}>
-                  <a
-                    href="#services"
+              {services.map((service) => (
+                <li key={service.slug}>
+                  <Link
+                    href={`/services/${service.slug}`}
                     className="text-gray-400 text-sm hover:text-[#50c148] transition-colors"
                   >
-                    {service}
-                  </a>
+                    {service.title}
+                  </Link>
                 </li>
               ))}
             </ul>

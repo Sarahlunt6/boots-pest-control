@@ -131,7 +131,16 @@ export default function Reviews() {
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Don&apos;t just take our word for it. See what St. George homeowners
-            are saying about Boots Pest Control.
+            are saying about Boots Pest Control, then{" "}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfWiFx6brRo6eADTSwHZW_MBrzyhutg5FX1FmidVKYdfVTqvg/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >
+              get your own free quote
+            </a>
+            .
           </p>
         </motion.div>
 

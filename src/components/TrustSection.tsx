@@ -24,7 +24,14 @@ const trustItems = [
   },
   {
     title: "Local to Southern Utah",
-    description: "Proudly serving St. George and surrounding communities",
+    description: (
+      <>
+        Proudly serving{" "}
+        <a href="#service-area" className="text-link">
+          St. George and surrounding communities
+        </a>
+      </>
+    ),
     icon: (
       <svg
         className="h-8 w-8"
@@ -48,7 +55,14 @@ const trustItems = [
   },
   {
     title: "5-Star Rated",
-    description: "Consistently excellent service backed by customer reviews",
+    description: (
+      <>
+        Consistently excellent service backed by{" "}
+        <a href="#reviews" className="text-link">
+          customer reviews
+        </a>
+      </>
+    ),
     icon: (
       <svg
         className="h-8 w-8"
@@ -67,7 +81,14 @@ const trustItems = [
   },
   {
     title: "Fast Response",
-    description: "Quick scheduling and prompt service when you need it most",
+    description: (
+      <>
+        <a href="#contact" className="text-link">
+          Quick scheduling
+        </a>{" "}
+        and prompt service when you need it most
+      </>
+    ),
     icon: (
       <svg
         className="h-8 w-8"

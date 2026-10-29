@@ -18,7 +18,16 @@ export default function OurWork() {
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Watch our professional technicians at work, delivering thorough pest
-            control treatments to protect your home.
+            control treatments to protect your home. See more on{" "}
+            <a
+              href="https://www.instagram.com/bootspest/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >
+              Instagram @bootspest
+            </a>
+            .
           </p>
         </motion.div>
 

@@ -202,8 +202,21 @@ export default function Services() {
             Our Pest Control Services
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From ants to rodents, we handle all types of pest problems with
-            professional-grade solutions that keep your home safe.
+            From{" "}
+            <Link href="/services/ant-extermination" className="text-link">
+              ants
+            </Link>{" "}
+            to{" "}
+            <Link href="/services/rodent-extermination" className="text-link">
+              rodents
+            </Link>
+            , we handle all types of pest problems with professional-grade
+            solutions that keep your home safe. Not sure what you&apos;re
+            dealing with? Start with a{" "}
+            <Link href="/services/pest-inspection" className="text-link">
+              pest inspection
+            </Link>
+            .
           </p>
         </motion.div>
 

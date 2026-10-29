@@ -74,8 +74,15 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto"
         >
-          Professional pest control services for St. George and Southern Utah.
-          Licensed and committed to protecting your home and family.
+          Professional{" "}
+          <a href="#services" className="text-link">
+            pest control services
+          </a>{" "}
+          for{" "}
+          <a href="#service-area" className="text-link">
+            St. George and Southern Utah
+          </a>
+          . Licensed and committed to protecting your home and family.
         </motion.p>
 
         <motion.div
@@ -146,7 +153,9 @@ export default function Hero() {
                 clipRule="evenodd"
               />
             </svg>
-            <span>5.0 Star Rating</span>
+            <a href="#reviews" className="inline-flex items-center hover:text-white transition-colors">
+              5.0 Star Rating
+            </a>
           </div>
           <div className="flex items-center gap-2">
             <svg
@@ -160,7 +169,9 @@ export default function Hero() {
                 clipRule="evenodd"
               />
             </svg>
-            <span>Local to Southern Utah</span>
+            <a href="#service-area" className="inline-flex items-center hover:text-white transition-colors">
+              Local to Southern Utah
+            </a>
           </div>
         </motion.div>
       </div>

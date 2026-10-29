@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 const services: Record<string, {
   title: string;
   description: string;
-  longDescription: string;
+  longDescription: React.ReactNode;
   signs: string[];
   process: string[];
   icon: React.ReactNode;
@@ -18,7 +18,7 @@ const services: Record<string, {
   "ant-extermination": {
     title: "Ant Extermination",
     description: "Eliminate ant colonies and prevent future infestations with our targeted treatments.",
-    longDescription: "Ants are one of the most common household pests in Southern Utah. Our professional ant extermination services target the entire colony, not just the ants you see. We use safe, effective treatments that eliminate ants at the source and create a protective barrier around your home to prevent future infestations.",
+    longDescription: <>Ants are one of the most common household pests in Southern Utah. Our professional ant extermination services target the entire colony, not just the ants you see. We use safe, effective treatments that eliminate ants at the source and create a protective barrier around your home to prevent future infestations. Seeing other insects too? Pair it with <Link href="/services/general-bug-control" className="text-link">general bug control</Link>.</>,
     signs: [
       "Trails of ants in your kitchen or bathroom",
       "Small piles of dirt or sand near walls",
@@ -49,7 +49,7 @@ const services: Record<string, {
   "cockroach-extermination": {
     title: "Cockroach Extermination",
     description: "Complete roach elimination using safe, effective methods that protect your family.",
-    longDescription: "Cockroaches are resilient pests that can spread disease and trigger allergies. Our comprehensive cockroach extermination service eliminates all life stages of roaches, from eggs to adults. We use professional-grade treatments that are safe for your family and pets while being highly effective against these persistent pests.",
+    longDescription: <>Cockroaches are resilient pests that can spread disease and trigger allergies. Our comprehensive cockroach extermination service eliminates all life stages of roaches, from eggs to adults. We use professional-grade treatments that are safe for your family and pets while being highly effective against these persistent pests. Not sure how big the problem is? Start with a <Link href="/services/pest-inspection" className="text-link">pest inspection</Link>.</>,
     signs: [
       "Seeing roaches during the day (indicates severe infestation)",
       "Droppings that look like coffee grounds or pepper",
@@ -82,7 +82,7 @@ const services: Record<string, {
   "spider-extermination": {
     title: "Spider Extermination",
     description: "Remove dangerous and nuisance spiders from your home with our expert treatments.",
-    longDescription: "Southern Utah is home to several spider species, including potentially dangerous ones like black widows and brown recluses. Our spider extermination service safely removes existing spiders and their webs while creating barriers to prevent new spiders from entering your home. We focus on both interior and exterior treatments for complete protection.",
+    longDescription: <>Southern Utah is home to several spider species, including potentially dangerous ones like black widows and brown recluses. Our spider extermination service safely removes existing spiders and their webs while creating barriers to prevent new spiders from entering your home. We focus on both interior and exterior treatments for complete protection, and our <Link href="/services/general-bug-control" className="text-link">general bug control</Link> cuts off the insects spiders feed on.</>,
     signs: [
       "Visible spider webs in corners and ceilings",
       "Spider sightings, especially at night",
@@ -116,7 +116,7 @@ const services: Record<string, {
   "rodent-extermination": {
     title: "Rodent Extermination",
     description: "Comprehensive rodent control to eliminate mice and rats from your property.",
-    longDescription: "Rodents pose serious health risks and can cause significant property damage. Our rodent extermination service includes complete elimination of existing populations and exclusion work to prevent future infestations. We use humane and effective methods to remove mice and rats while sealing entry points to keep them out permanently.",
+    longDescription: <>Rodents pose serious health risks and can cause significant property damage. Our rodent extermination service includes complete elimination of existing populations and exclusion work to prevent future infestations. We use humane and effective methods to remove mice and rats while sealing entry points to keep them out permanently. Rodents often carry fleas and mites, so ask about <Link href="/services/flea-mite-treatment" className="text-link">flea & mite treatment</Link> too.</>,
     signs: [
       "Droppings in cabinets, drawers, or along walls",
       "Gnaw marks on food packaging or structures",
@@ -154,7 +154,7 @@ const services: Record<string, {
   "hornet-wasp-control": {
     title: "Hornet & Wasp Control",
     description: "Safe removal of stinging insect nests to protect your family and pets.",
-    longDescription: "Hornets and wasps can be aggressive, especially when their nests are disturbed. Our professional stinging insect control service safely removes nests from your property, eliminating the threat to your family and pets. We handle all types of stinging insects including paper wasps, yellow jackets, hornets, and mud daubers.",
+    longDescription: <>Hornets and wasps can be aggressive, especially when their nests are disturbed. Our professional stinging insect control service safely removes nests from your property, eliminating the threat to your family and pets. We handle all types of stinging insects including paper wasps, yellow jackets, hornets, and mud daubers. A <Link href="/services/pest-inspection" className="text-link">pest inspection</Link> can find nests before they grow.</>,
     signs: [
       "Visible nests under eaves, in trees, or underground",
       "Increased wasp activity around your home",
@@ -190,7 +190,7 @@ const services: Record<string, {
   "flea-mite-treatment": {
     title: "Flea & Mite Treatment",
     description: "Eliminate fleas and mites that affect your pets and home environment.",
-    longDescription: "Fleas and mites can quickly infest your home, causing discomfort for both your family and pets. Our comprehensive treatment eliminates all life stages of these pests, from eggs to adults. We treat both indoor and outdoor areas to ensure complete elimination and provide guidance on preventing re-infestation.",
+    longDescription: <>Fleas and mites can quickly infest your home, causing discomfort for both your family and pets. Our comprehensive treatment eliminates all life stages of these pests, from eggs to adults. We treat both indoor and outdoor areas to ensure complete elimination and provide guidance on preventing re-infestation. Since <Link href="/services/rodent-extermination" className="text-link">rodents</Link> often bring fleas indoors, we&apos;ll check for them as well.</>,
     signs: [
       "Pets scratching excessively",
       "Small bites on ankles and lower legs",
@@ -223,7 +223,7 @@ const services: Record<string, {
   "general-bug-control": {
     title: "General Bug Control",
     description: "Broad-spectrum treatment for various insects invading your home.",
-    longDescription: "From earwigs to beetles, silverfish to centipedes, our general bug control service handles a wide variety of household pests. We create a protective barrier around your home and treat problem areas inside to eliminate current infestations and prevent new ones. This service is perfect for ongoing pest prevention.",
+    longDescription: <>From earwigs to beetles, silverfish to centipedes, our general bug control service handles a wide variety of household pests. We create a protective barrier around your home and treat problem areas inside to eliminate current infestations and prevent new ones. This service is perfect for ongoing pest prevention, and it also helps with <Link href="/services/ant-extermination" className="text-link">ants</Link> and <Link href="/services/spider-extermination" className="text-link">spiders</Link>.</>,
     signs: [
       "Multiple types of insects appearing in your home",
       "Insects near windows, doors, or in basements",
@@ -253,7 +253,7 @@ const services: Record<string, {
   "pest-inspection": {
     title: "Pest Inspection",
     description: "Thorough property inspection to identify potential pest problems before they start.",
-    longDescription: "Prevention is the best pest control. Our comprehensive pest inspection service identifies potential pest problems before they become infestations. We examine your entire property, inside and out, looking for signs of pest activity, entry points, and conditions that attract pests. You'll receive a detailed report with recommendations for keeping your home pest-free.",
+    longDescription: <>Prevention is the best pest control. Our comprehensive pest inspection service identifies potential pest problems before they become infestations. We examine your entire property, inside and out, looking for signs of pest activity, entry points, and conditions that attract pests. You&apos;ll receive a detailed report with recommendations for keeping your home pest-free, plus a plan from our <Link href="/#services" className="text-link">full list of services</Link> if treatment is needed.</>,
     signs: [
       "Buying or selling a home",
       "Moving into a new property",
@@ -432,7 +432,10 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                 Ready to Get Rid of Your Pest Problem?
               </h2>
               <p className="text-lg text-gray-300 mb-10">
-                Contact Boots Pest Control today for a free quote. We&apos;ll help you take back your home.
+                <a href="tel:+14357737103" className="text-link">
+                  Contact Boots Pest Control
+                </a>{" "}
+                today for a free quote. We&apos;ll help you take back your home.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

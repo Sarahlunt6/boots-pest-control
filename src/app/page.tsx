@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import OurWork from "@/components/OurWork";
+import InstagramFeed from "@/components/InstagramFeed";
 import TrustSection from "@/components/TrustSection";
 import Reviews from "@/components/Reviews";
 import ServiceArea from "@/components/ServiceArea";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Services />
         <OurWork />
+        <InstagramFeed />
         <TrustSection />
         <Reviews />
         <ServiceArea />

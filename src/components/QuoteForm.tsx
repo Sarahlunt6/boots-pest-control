@@ -17,8 +17,20 @@ export default function QuoteForm() {
             Ready to Be Pest-Free?
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Don&apos;t let pests take over your home. Contact Boots Pest Control
-            today for a free quote and take back your space.
+            Don&apos;t let pests take over your home.{" "}
+            <a href="tel:+14357737103" className="text-link">
+              Contact Boots Pest Control
+            </a>{" "}
+            today for a{" "}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfWiFx6brRo6eADTSwHZW_MBrzyhutg5FX1FmidVKYdfVTqvg/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link"
+            >
+              free quote
+            </a>{" "}
+            and take back your space.
           </p>
         </motion.div>
 
@@ -108,7 +120,9 @@ export default function QuoteForm() {
               </svg>
             </div>
             <h3 className="font-semibold text-[#231f20] mb-1">Service Area</h3>
-            <p className="text-gray-600">St. George & Southern Utah</p>
+            <a href="#service-area" className="text-link">
+              St. George & Southern Utah
+            </a>
           </div>
 
           <div className="flex flex-col items-center">
